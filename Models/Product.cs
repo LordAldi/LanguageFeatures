@@ -8,6 +8,7 @@ namespace LanguageFeatures.Models
     public class Product
     {
         public string Name { get; set; }
+        public string Category {get;set;} = "Watersport"
         public decimal? Price { get; set; }
         public Product Related { get; set; }
         public static Product[] GetProducts()
@@ -15,6 +16,7 @@ namespace LanguageFeatures.Models
             Product kayak = new Product
             {
                 Name = "Kayak",
+                Category="Water Craft",
                 Price = 275M
             };
             Product lifeJacket = new Product
