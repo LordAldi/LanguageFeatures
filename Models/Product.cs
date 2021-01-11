@@ -7,10 +7,14 @@ namespace LanguageFeatures.Models
 {
     public class Product
     {
+        public Product(bool stock =true){
+            InStock=stock;
+        }
         public string Name { get; set; }
-        public string Category {get;set;} = "Watersport"
+        public string Category {get;set;} = "Watersport";
         public decimal? Price { get; set; }
         public Product Related { get; set; }
+         public bool InStock { get; } 
         public static Product[] GetProducts()
         {
             Product kayak = new Product
@@ -19,7 +23,7 @@ namespace LanguageFeatures.Models
                 Category="Water Craft",
                 Price = 275M
             };
-            Product lifeJacket = new Product
+            Product lifeJacket = new Product(false)
             {
                 Name = "Life Jacket",
                 Price = 48.95M
