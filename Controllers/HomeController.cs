@@ -50,6 +50,17 @@ namespace LanguageFeatures.Controllers
 
         return View(Product.GetProducts().Select(p => p?.Name));
     }*/
-        public ViewResult Index() => View(Product.GetProducts().Select(p => p?.Name));
+        /*public ViewResult Index() => View(Product.GetProducts().Select(p => p?.Name));*/
+
+        public ViewResult Index()
+        {
+            IProductSelection cart = new ShoppingCart (
+                 new Product { Name = "Kayak", Price = 275M },
+                 new Product { Name = "Lifejacket", Price = 48.95M },
+                 new Product { Name = "Soccer ball", Price = 19.50M },
+                 new Product { Name = "Corner flag", Price = 34.95M }
+             );
+            return View(cart.Products.Select(p => p.Name));
+        }
     }
 }
