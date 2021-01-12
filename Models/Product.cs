@@ -10,10 +10,10 @@ namespace LanguageFeatures.Models
         public Product(bool stock =true){
             InStock=stock;
         }
-        public string Name { get; set; }
+        public string Name { get; set; } = "";
         public string Category {get;set;} = "Watersport";
         public decimal? Price { get; set; }
-        public Product Related { get; set; }
+        public Product? Related { get; set; } 
          public bool InStock { get; } 
         public static Product[] GetProducts()
         {
