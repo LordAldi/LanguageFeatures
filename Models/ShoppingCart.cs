@@ -11,6 +11,7 @@ namespace LanguageFeatures.Models
         public IEnumerable<Product>? Products { get; set; }
         public IEnumerator<Product> GetEnumerator()
         {
+
             return Products.GetEnumerator();
         }
         IEnumerator IEnumerable.GetEnumerator()

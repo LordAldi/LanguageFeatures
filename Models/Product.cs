@@ -30,7 +30,7 @@ namespace LanguageFeatures.Models
             };
              kayak.Related = lifeJacket;
 
-            return new Product[] { kayak, lifeJacket, null };
+            return new Product[] { kayak, lifeJacket };
         }
     }
 }
